@@ -13,16 +13,16 @@ usersRouter.post('/', async (request, response) => {
     const { username, name, password } = request.body
 
     if (!username || !password) {
-        return response.status(400).json({ error: "username and password cant be empty" })
+        return response.status(400).json({ error: "Username and password cant be empty" })
     }
 
     if (username.length < 3 || password.length < 3) {
-        return response.status(400).json({ error: "username and password must have at least 3 characters" })
+        return response.status(400).json({ error: "Username and password must have at least 3 characters" })
     }
 
     const existingUser = await User.findOne({ username })
     if (existingUser) {
-        return response.status(400).json({ error: "username must be unique" })
+        return response.status(400).json({ error: "Username must be unique" })
     }
 
     const saltRounds = 10

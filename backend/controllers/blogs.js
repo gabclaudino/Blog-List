@@ -25,14 +25,14 @@ blogsRouter.post('/', middleware.userExtractor, async (request, response) => {
     const body = request.body
 
     if (!body.title || !body.url) {
-        return response.status(400).end()
+        return response.status(400).json({ error: 'Title and URL are needed' })
     }
 
     const user = request.user
 
     const blog = new Blog({
         title: body.title,
-        author: body.author,
+        author: body.author || "anonymous",
         url: body.url,
         likes: body.likes || 0,
         user: user.id
@@ -51,12 +51,12 @@ blogsRouter.post('/', middleware.userExtractor, async (request, response) => {
 blogsRouter.delete('/:id', middleware.userExtractor, async (request, response) => {
     const user = request.user
     if (!user) {
-        return response.status(401).json({ error: 'token missing or user not found' })
+        return response.status(401).json({ error: 'Token missing or user not found' })
     }
 
     const blog = await Blog.findById(request.params.id)
     if (!blog) {
-        return response.status(404).json({ error: 'blog not found' })
+        return response.status(404).json({ error: 'Blog not found' })
     }
 
     if (user.id.toString() === blog.user.toString()) {
@@ -64,7 +64,7 @@ blogsRouter.delete('/:id', middleware.userExtractor, async (request, response) =
         return response.status(204).end()
     }
     else
-        return response.status(400).json({ error: 'the blog does not belongs to you' })
+        return response.status(400).json({ error: 'The blog does not belongs to you' })
 
 })
 

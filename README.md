@@ -7,6 +7,8 @@ Esta é uma aplicação Full Stack desenvolvida como parte do curso Full Stack O
 
  - Vite: Ferramenta de build rápida para o desenvolvimento frontend.
 
+ - Tailwind CSS: Framework CSS utilitário para estilização.
+
  - Axios: Cliente HTTP para comunicação com a API.
 
  - Estado e Efeitos: Uso intensivo de useState, useEffect e useRef para gerenciamento de dados e interações.
