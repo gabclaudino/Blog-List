@@ -1,6 +1,6 @@
 **Blog List Backend**
 
-API RESTful robusta construída com **Node.js**, **Express** e **MongoDB**.
+API RESTful construída com **Node.js**, **Express** e **MongoDB**.
 
 **Funcionalidades**
 - **Segurança:** Autenticação via Token (JWT) e criptografia de senhas (Bcrypt).

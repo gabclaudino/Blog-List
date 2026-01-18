@@ -5,13 +5,13 @@ Esta é uma aplicação Full Stack desenvolvida como parte do curso Full Stack O
 **Frontend:**
  - React: Biblioteca principal para a interface.
 
- - Vite: Ferramenta de build rápida para o desenvolvimento frontend.
+ - Vite: Ferramenta de build rápida para o desenvolvimento.
 
  - Tailwind CSS: Framework CSS utilitário para estilização.
 
  - Axios: Cliente HTTP para comunicação com a API.
 
- - Estado e Efeitos: Uso intensivo de useState, useEffect e useRef para gerenciamento de dados e interações.
+ - Estado e Efeitos: Uso de useState, useEffect e useRef para gerenciamento de dados e interações.
 
 **Backend:**
  - Node.js & Express: Ambiente de execução e framework para a construção da API REST.
@@ -32,7 +32,7 @@ Esta é uma aplicação Full Stack desenvolvida como parte do curso Full Stack O
  - DELETE /api/blogs/:id: Remove um blog (Requer Token e validação de dono).
 
 **Testes de Integração:**
-O projeto possui uma suíte de testes robusta para o backend utilizando Supertest e Jest. Os testes cobrem:
+O projeto possui uma suíte de testes para o backend utilizando Supertest e Jest. Os testes cobrem:
  - Verificação do formato de resposta (JSON).
 
  - Validação da criação de blogs com e sem tokens de autorização.
