@@ -55,7 +55,7 @@ O projeto possui uma suíte de testes robusta para o backend utilizando Supertes
     Crie um arquivo `.env` na raiz do backend e defina as seguintes variáveis:
     - `MONGODB_URI`: Sua string de conexão com o MongoDB Atlas.
     - `SECRET`: Uma chave secreta para a geração de tokens JWT.
-    - `PORT`: A porta em que o servidor backend será executado (ex: 3003).
+    - `PORT`: A porta em que o servidor backend será executado (o Vite está configurado por padrão na 3003).
 
 4. Inicie o servidor de desenvolvimento:
     Backend: `npm run dev` (dentro da pasta do backend)
