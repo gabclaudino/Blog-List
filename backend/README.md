@@ -10,6 +10,6 @@ API RESTful robusta construída com **Node.js**, **Express** e **MongoDB**.
 
 **Como rodar**
 1. `npm install`
-2. Configure o `.env` (MONGODB_URI e SECRET)
+2. Configure o `.env` (MONGODB_URI, SECRET e PORT)
 3. `npm run dev`
 4. Para testes: `npm test`
