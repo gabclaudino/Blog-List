@@ -25,24 +25,24 @@ Esta é uma aplicação Full Stack desenvolvida como parte do curso Full Stack O
 **Rotas da API:**
 A API segue os padrões RESTful.
 
-Autenticação (Login):
- - POST /api/login: Autentica um usuário e retorna um token JWT válido por 1 hora.
+- Autenticação (Login):
+    - POST /api/login: Autentica um usuário e retorna um token JWT válido por 1 hora.
 
-Usuários:
- - GET /api/users: Lista todos os usuários e seus respectivos blogs postados.
+- Usuários:
+    - GET /api/users: Lista todos os usuários e seus respectivos blogs postados.
 
- - POST /api/users: Cria um novo usuário. 
+    - POST /api/users: Cria um novo usuário. 
 
-Blogs:
- - GET /api/blogs: Retorna todos os blogs, incluindo os dados básicos do usuário que o postou.
+- Blogs:
+    - GET /api/blogs: Retorna todos os blogs, incluindo os dados básicos do usuário que o postou.
 
- - GET /api/blogs/:id: Retorna os detalhes de um blog específico.
+    - GET /api/blogs/:id: Retorna os detalhes de um blog específico.
 
- - POST /api/blogs: Cria um novo blog (Requer Token de autenticação).
+    - POST /api/blogs: Cria um novo blog (Requer Token de autenticação).
 
- - PUT /api/blogs/:id: Atualiza dados de um blog, como a contagem de likes.
+    - PUT /api/blogs/:id: Atualiza dados de um blog, como a contagem de likes.
 
- - DELETE /api/blogs/:id: Remove um blog (Requer Token e apenas o dono do blog pode deletá-lo).
+    - DELETE /api/blogs/:id: Remove um blog (Requer Token e apenas o dono do blog pode deletá-lo).
 
 **Testes de Integração:**
 O projeto possui uma suíte de testes para o backend utilizando Supertest e Jest. Os testes cobrem:
