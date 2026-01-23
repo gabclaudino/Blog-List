@@ -58,9 +58,9 @@ describe('blogs test', () => {
 
     test('a new blog can be created', async () => {
         const newBlog = {
-            title: "muito boa noite",
+            title: "New blog",
             author: "Gabriel",
-            url: "www.sefoda.com",
+            url: "https://www.newblog.com",
             likes: 92
         }
 
@@ -75,16 +75,16 @@ describe('blogs test', () => {
         expect(blogsAtEnd).toHaveLength(helper.initialBlogs.length + 1)
 
         const titles = blogsAtEnd.map(b => b.title)
-        expect(titles).toContain('muito boa noite')
+        expect(titles).toContain('New blog')
     })
 
 
     test('a blog with no likes can be created', async () => {
 
         const newBlog = {
-            title: "muito boa tarde",
+            title: "New Blog",
             author: "Gabriel",
-            url: "www.sefoda.com",
+            url: "https://www.newblog.com",
         }
 
         await api
@@ -155,9 +155,9 @@ describe('blogs test', () => {
         const blogsAtStart = await helper.blogsInDb()
 
         const newBlog = {
-            title: "muito boa noite",
+            title: "New Blog",
             author: "Gabriel",
-            url: "www.sefoda.com",
+            url: "https://www.newblog.com",
             likes: 92
         }
 
